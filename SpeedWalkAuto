@@ -1,0 +1,11 @@
+while wait do
+  local RedOrb = {
+    [1] = "collectOrb", -- 刷新类型
+    [2] = "Red Orb", -- 刷新对象
+    [3] = "Legends Highway" -- 刷取地点
+  }
+  for i = 1,99 do -- 循环99次
+    game:GetService("ReplicatedStorage").rEvents.orbEvent:FireServer(unpack(RedOrb)) -- 升级
+  end
+  wait()
+end
